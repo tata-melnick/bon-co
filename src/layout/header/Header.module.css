@@ -1,0 +1,30 @@
+.topLine {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 13px;
+}
+
+.menu {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    margin-left: calc(50% - 455px / 2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 455px;
+}
+
+.call {
+    margin-right: 12%;
+}
