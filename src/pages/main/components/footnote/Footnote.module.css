@@ -1,0 +1,39 @@
+.container {
+    width: 100%;
+    padding: 15px 0;
+    background: #1b1b1b;
+    display: flex;
+}
+
+.border {
+    flex: 1;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textContainer {
+    width: 680px;
+    height: 225px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    margin: 0 10px;
+}
+
+.comma {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 96px;
+    margin-bottom: 75px;
+}
+
+.commaUp {
+    transform: rotateZ(180deg);
+    margin-bottom: 0;
+    margin-top: 85px;
+}
