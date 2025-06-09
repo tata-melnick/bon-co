@@ -1,0 +1,46 @@
+.runningLine {
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    height: 105px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: background-color 0.2s ease;
+    padding: 20px;
+
+    &:hover {
+        background-color: #8b1e3f;
+        color: #fff;
+    }
+}
+
+.line {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    animation: run 20s linear infinite;
+}
+
+@keyframes run {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-110%);
+    }
+}
+
+.conclusion {
+    height: 270px;
+    background: #1b1b1b;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conclusionText {
+    width: 600px;
+    color: #fff;
+    text-align: center;
+}
