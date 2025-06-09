@@ -2,13 +2,11 @@ import React from "react";
 
 import footerLogo from "../../assets/bon-co-footer-logo.svg";
 import footerSupport from "../../assets/footer-support.png";
-import instagram from "../../assets/instagram.svg";
-import telegram from "../../assets/telegram.svg";
-import whatsApp from "../../assets/whats-app.svg";
 import { ExtLink, Link } from "../../common";
 import { routes } from "../../constants";
 
 import styles from "./Footer.module.css";
+import { Instagram, Telegram, WhatsApp } from "./icons";
 
 export const Footer = () => {
     return (
@@ -25,13 +23,13 @@ export const Footer = () => {
                 </Link>
                 <div className={styles.socials}>
                     <ExtLink>
-                        <img src={whatsApp} alt="WhatsApp" />
+                        <WhatsApp />
                     </ExtLink>
                     <ExtLink>
-                        <img src={telegram} alt="Telegram" />
+                        <Telegram />
                     </ExtLink>
                     <ExtLink>
-                        <img src={instagram} alt="Instagram" />
+                        <Instagram />
                     </ExtLink>
                 </div>
             </div>

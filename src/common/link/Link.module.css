@@ -1,3 +1,7 @@
 .link {
     font-size: 18px;
+
+    &:hover {
+        color: #e1caa1;
+    }
 }

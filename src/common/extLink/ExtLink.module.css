@@ -2,8 +2,9 @@
     cursor: pointer;
     font-size: 18px;
     font-weight: 500;
-}
+    transition: color .2s ease;
 
-.link:hover {
-    opacity: 0.8;
+    &:hover {
+        color: #8b1e3f;
+    }
 }
