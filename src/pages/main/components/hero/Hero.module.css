@@ -1,0 +1,61 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+    padding: 0 40px;
+}
+
+.welcome {
+    width: 460px;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.text {
+    width: 305px;
+}
+
+.imgWrapper {
+    display: flex;
+    width: 580px;
+    height: 740px;
+    position: relative;
+}
+
+.heroImg1 {
+    position: absolute;
+    bottom: 40px;
+    left: -28px;
+    height: 590px;
+    width: 262px;
+    background-image: url("./assets/hero-1.png");
+    background-repeat: no-repeat;
+    border-right: 1px solid #000;
+    background-position-y: 90%;
+}
+
+.heroImg2 {
+    position: absolute;
+    bottom: 88px;
+    left: 233px;
+    height: 505px;
+    width: 190px;
+    background-image: url("./assets/hero-2.png");
+    background-repeat: no-repeat;
+    border-right: 1px solid #000;
+}
+
+.heroImg3 {
+    position: absolute;
+    bottom: 45px;
+    left: 423px;
+    height: 590px;
+    width: 130px;
+    background-image: url("./assets/hero-3.png");
+    background-repeat: no-repeat;
+    background-position-y: 95%;
+}
