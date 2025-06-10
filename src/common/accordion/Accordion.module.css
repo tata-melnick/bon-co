@@ -1,0 +1,36 @@
+.container {
+    width: 485px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.textContainer {
+    height: 1px;
+    border-bottom: 1px solid #000;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+
+.open {
+    height: 220px;
+}
+
+.text {
+    padding-top: 10px;
+    width: 305px;
+}
+
+.arrow {
+    transition: transform 0.2s ease-out;
+}
+
+.arrowUp {
+    transform: rotateX(180deg);
+}
