@@ -1,0 +1,57 @@
+.wrapper {
+    overflow-x: scroll;
+    width: 100%;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.slider {
+    overflow-x: scroll;
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    margin-bottom: 60px;
+}
+
+.slide {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    width: 100%;
+    height: 560px;
+    margin-bottom: 20px;
+}
+
+.scrollWrap {
+    height: 20px;
+}
+
+.scroll {
+    --scroll-width: "";
+    --offset: "";
+    margin: 0 auto;
+    position: relative;
+    height: 2px;
+    width: 305px;
+    border-radius: 1px;
+    background: #00000080;
+
+    &:after {
+        position: absolute;
+        border-radius: 2px;
+        top: -1px;
+        width: var(--scroll-width);
+        left: var(--offset);
+        transition: left .2s ease-in;
+        content: "";
+        height: 4px;
+        background: #000;
+    }
+}

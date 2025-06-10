@@ -1,3 +1,11 @@
+.sliderWrap {
+    padding: 100px 0 90px;
+}
+
+.sliderTitle {
+    margin: 0 0 40px 140px;
+}
+
 .runningLine {
     border-bottom: 1px solid #000;
     border-top: 1px solid #000;

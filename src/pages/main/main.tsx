@@ -1,15 +1,34 @@
 import React from "react";
 
-import { Star, Text } from "../../common";
+import { Star, Text, Title } from "../../common";
 
-import { Advantages, Footnote, Hero, MasterClass } from "./components";
+import dispenser from "./assets/dispenser.png";
+import sinks from "./assets/sinks.png";
+import steps from "./assets/steps.png";
+import tabletop from "./assets/tabletop.png";
+import vases from "./assets/vases.png";
+import { Advantages, Footnote, Hero, MasterClass, type Slide, Slider } from "./components";
 import styles from "./main.module.css";
+
+const sliders: Slide[] = [
+    { title: "Раковины", slide: sinks },
+    { title: "Ступени", slide: steps },
+    { title: "Вазы", slide: vases },
+    { title: "Дозатор", slide: dispenser },
+    { title: "Столешницы", slide: tabletop },
+];
 
 export const Main = () => {
     return (
         <div>
             <Hero />
             <Footnote />
+            <div className={styles.sliderWrap}>
+                <Title className={styles.sliderTitle} type="h2">
+                    Наши услуги:
+                </Title>
+                <Slider sliders={sliders} />
+            </div>
             <Advantages />
             <MasterClass />
             <div className={styles.runningLine}>
