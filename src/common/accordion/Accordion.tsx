@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
+import { Arrow } from "../arrow";
 import { Text } from "../text";
 import { Title } from "../title";
 
 import styles from "./Accordion.module.css";
-import { Arrow } from "./Arrow";
 
 type AccordionProps = {
     title: string;
@@ -14,13 +14,13 @@ type AccordionProps = {
 export const Accordion = ({ title, text }: AccordionProps) => {
     const [isOpen, setIsOpen] = useState(false);
 
-    const togleOpen = () => setIsOpen((prev) => !prev);
+    const toggleOpen = () => setIsOpen((prev) => !prev);
 
     return (
         <div className={styles.container}>
-            <div className={styles.title} onClick={togleOpen}>
+            <div className={styles.title} onClick={toggleOpen}>
                 <Title type="h3">{title}</Title>
-                <Arrow isUp={isOpen} />
+                <Arrow rotate={isOpen ? "up" : "down"} />
             </div>
             <div className={`${styles.textContainer} ${isOpen ? styles.open : ""}`}>
                 <Text className={styles.text}>{text}</Text>

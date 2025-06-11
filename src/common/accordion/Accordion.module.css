@@ -26,11 +26,3 @@
     padding-top: 10px;
     width: 305px;
 }
-
-.arrow {
-    transition: transform 0.2s ease-out;
-}
-
-.arrowUp {
-    transform: rotateX(180deg);
-}
