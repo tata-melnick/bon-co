@@ -4,7 +4,7 @@ import { Title } from "../../../../common";
 
 import styles from "./Slider.module.css";
 
-export type Slide = { title: string; slide: string };
+export type Slide = { title: string; slide: string; description: string };
 type SliderProps = { sliders: Slide[] };
 
 export const Slider = ({ sliders }: SliderProps) => {
@@ -68,9 +68,10 @@ export const Slider = ({ sliders }: SliderProps) => {
                 onMouseLeave={onMouseLeave}
             >
                 <div ref={sliderRef} className={styles.slider}>
-                    {sliders.map(({ slide, title }) => (
+                    {sliders.map(({ slide, title, description }) => (
                         <div ref={slideRef} key={slide.replace(/[./]/g, "")} className={styles.slide}>
                             <img className={styles.img} src={slide} alt="Наши услуги" />
+                            <div className={styles.description}>{description}</div>
                             <Title type="h3">{title}</Title>
                         </div>
                     ))}

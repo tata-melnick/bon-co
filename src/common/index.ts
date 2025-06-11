@@ -5,3 +5,4 @@ export * from "./text";
 export * from "./title";
 export * from "./star";
 export * from "./accordion";
+export * from "./arrow";

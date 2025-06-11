@@ -3,26 +3,27 @@
     align-items: center;
     justify-content: center;
     height: 800px;
-    padding: 0 40px;
+    padding: 0 40px 50px 135px;
 }
 
 .welcome {
     width: 460px;
-    height: 370px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     z-index: 1;
 }
 
+.title {
+    margin-bottom: 40px;
+}
+
 .text {
-    width: 305px;
+    width: 315px;
+    margin-bottom: 60px;
 }
 
 .imgWrapper {
     display: flex;
-    width: 580px;
-    height: 740px;
+    width: 565px;
+    height: 735px;
     position: relative;
 }
 

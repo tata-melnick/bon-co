@@ -11,11 +11,11 @@ import { Advantages, Footnote, Hero, MasterClass, type Slide, Slider } from "./c
 import styles from "./main.module.css";
 
 const sliders: Slide[] = [
-    { title: "Раковины", slide: sinks },
-    { title: "Ступени", slide: steps },
-    { title: "Вазы", slide: vases },
-    { title: "Дозатор", slide: dispenser },
-    { title: "Столешницы", slide: tabletop },
+    { title: "Раковины", slide: sinks, description: "Долговечные, устойчивые к царапинам и загрязнениям" },
+    { title: "Ступени", slide: steps, description: "Элегантные, добавляющие изысканность" },
+    { title: "Вазы", slide: vases, description: "Эксклюзивные, подчеркивающие ваш вкус" },
+    { title: "Дозатор", slide: dispenser, description: "Красивые и функциональные" },
+    { title: "Столешницы", slide: tabletop, description: "Прочные, с уникальным дизайном" },
 ];
 
 export const Main = () => {

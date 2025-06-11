@@ -34,7 +34,7 @@ export const MasterClass = () => {
                         <Text>Возможность трудоустройства в нашу компанию</Text>
                     </li>
                 </ul>
-                <Button>записаться на мастер-класс</Button>
+                <Button>Записаться на мастер-класс</Button>
             </div>
             <img className={styles.img} src={vase} alt="Ваза с сухоцветами" />
         </div>
