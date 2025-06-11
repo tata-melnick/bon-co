@@ -1,0 +1,55 @@
+.container {
+    padding: 100px 135px;
+    border-bottom: 1px solid #000;
+}
+
+.title {
+    margin-bottom: 40px;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.delimiter {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 25%;
+    left: 25%;
+
+    > span {
+        margin-right: -1px;
+        display: inline-block;
+        height: 1px;
+        width: 100px;
+        background: #000;
+    }
+}
+
+.right {
+    left: unset;
+    right: 31%;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    height: 116px;
+    margin-bottom: 20px;
+}
+
+.servicesTitle {
+    margin-bottom: 10px;
+}
+
+.text {
+    text-align: center;
+}
