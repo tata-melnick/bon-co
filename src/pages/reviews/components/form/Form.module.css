@@ -1,0 +1,48 @@
+.container {
+    width: 100%;
+    display: flex;
+    padding-left: 145px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 100px 80px 0 0;
+
+    > button {
+        width: 100%;
+    }
+}
+
+.title {
+    margin-bottom: 40px;
+}
+
+.text {
+    width: 340px;
+    margin-bottom: 35px;
+}
+
+.input {
+    border: 1px solid #000;
+    width: 100%;
+    font-size: 20px;
+
+    &::placeholder {
+        color: #000;
+        font-size: 20px;
+    }
+}
+
+.name {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.textarea {
+    padding: 10px 20px;
+    margin-bottom: 60px;
+    height: 180px;
+    resize: none;
+}
