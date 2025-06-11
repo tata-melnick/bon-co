@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+}
+
+.content {
+    width: 625px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    margin-bottom: 40px;
+}
+
+.text {
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.img {
+    height: 100%;
+    flex: 1;
+}
