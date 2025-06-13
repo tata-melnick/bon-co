@@ -15,7 +15,7 @@ if (root) {
     createRoot(root).render(
         <StrictMode>
             <UiStateProvider>
-                <BrowserRouter>
+                <BrowserRouter basename="/bon-co/">
                     <Routes>
                         <Route element={<Layout />}>
                             <Route index path={routes.main} element={<Main />} />
