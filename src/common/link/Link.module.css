@@ -1,8 +1,0 @@
-.link {
-    font-size: 18px;
-    transition: color .2s ease;
-
-    &:hover {
-        color: #e1caa1;
-    }
-}
