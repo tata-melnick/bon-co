@@ -16,4 +16,5 @@ export default defineConfig({
             fix: true,
         }),
     ],
+    base: "/bon-co/",
 });

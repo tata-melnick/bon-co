@@ -41,7 +41,10 @@ export const Footer = observer(() => {
                 </div>
             </div>
             <div className={styles.support}>
-                <p>2024 © Бондарев Евгений Владимирович Все права защищены. Политика конфиденциальности</p>
+                <div className={styles.copyright}>
+                    <p>2024 © Бондарев Евгений Владимирович Все права защищены.</p>
+                    <p> Политика конфиденциальности</p>
+                </div>
                 <img
                     className={styles.supportImg}
                     src={isDesktop ? footerSupport : footerSupportMobile2}
