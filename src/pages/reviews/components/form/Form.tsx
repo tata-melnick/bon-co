@@ -36,7 +36,9 @@ export const Form = () => {
                     Отправить
                 </Button>
             </div>
-            <img src={image} alt="Ваза" />
+            <div className={styles.imgContainer}>
+                <img className={styles.img} src={image} alt="Ваза" />
+            </div>
         </div>
     );
 };

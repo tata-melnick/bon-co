@@ -4,12 +4,17 @@
 }
 
 .text {
-    width: 580px;
+    width: 48%;
     margin: 0 auto 100px;
     text-align: center;
+
+    @media screen and (max-width: 768px){
+        width: 80%;
+    }
 }
 
 .gallery {
+    overflow: hidden;
     width: 99%;
     margin-bottom: 100px;
     height: 1120px;
@@ -17,6 +22,13 @@
     grid-template: repeat(56, 20px) / 1fr  1fr  1fr;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 768px){
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        row-gap: 5px;
+    }
 }
 
 .img {

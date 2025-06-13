@@ -18,7 +18,9 @@ export const Why = () => {
                 </Text>
                 <Text className={styles.text}>Доверьтесь нам — и ваш интерьер заиграет новыми гранями.</Text>
             </div>
-            <img className={styles.img} src={img} alt="Кухня" />
+            <div className={styles.imgContainer}>
+                <img className={styles.img} src={img} alt="Кухня" />
+            </div>
         </div>
     );
 };

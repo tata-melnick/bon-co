@@ -2,61 +2,211 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5%;
     height: 800px;
     padding: 0 40px 50px 135px;
+
+    @media screen and (max-width: 1100px) {
+        padding: 35px 0 45px 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+        height: 700px;
+        padding: 35px 0 0;
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 480px) {
+        height: 600px;
+    }
 }
 
 .welcome {
-    width: 460px;
+    width: 45%;
     z-index: 1;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 1100px) {
+        width: 48%;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 60%;
+        margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 480px) {
+        width: 80%;
+    }
 }
 
 .title {
     margin-bottom: 40px;
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 20px;
+    }
 }
 
 .text {
-    width: 315px;
+    width: 82%;
     margin-bottom: 60px;
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 30px;
+    }
 }
 
 .imgWrapper {
     display: flex;
-    width: 565px;
-    height: 735px;
+    align-items: flex-end;
+    width: 41%;
+    height: 100%;
     position: relative;
+
+    @media screen and (max-width: 1000px) {
+        width: 30%;
+        height: 65%;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        height: 0;
+        transform: rotate(-26.8deg);
+        flex: 1;
+    }
 }
 
 .heroImg1 {
     position: absolute;
-    bottom: 40px;
-    left: -28px;
-    height: 590px;
-    width: 262px;
+    top: 100px;
+    left: -13.9%;
+    height: 75%;
+    width: 55%;
     background-image: url("./assets/hero-1.png");
     background-repeat: no-repeat;
     border-right: 1px solid #000;
     background-position-y: 90%;
+    background-size: 150%;
+
+    @media screen and (max-width: 768px) {
+        top: -15%;
+        left: 10%;
+        height: 90%;
+        width: 32%;
+    }
+
+    @media screen and (max-width: 600px) {
+        top: -16%;
+        left: 4%;
+        height: 85%;
+        width: 37%;
+    }
+
+    @media screen and (max-width: 480px) {
+        left: 3%;
+        height: 87%;
+    }
+
+    @media screen and (max-width: 410px) {
+        height: 78%;
+    }
+
+    @media screen and (max-width: 325px) {
+        top: -10%;
+        left: -4%;
+        height: 74%;
+        width: 42%;
+    }
 }
 
 .heroImg2 {
     position: absolute;
-    bottom: 88px;
-    left: 233px;
-    height: 505px;
-    width: 190px;
+    top: 150px;
+    left: 40.8%;
+    height: 63%;
+    width: 39.5%;
     background-image: url("./assets/hero-2.png");
     background-repeat: no-repeat;
     border-right: 1px solid #000;
+    background-size: 101%;
+
+    @media screen and (max-width: 768px) {
+        top: 12%;
+        left: 41.9%;
+        height: 79%;
+        width: 25%;
+        border-left: 1px solid #000;
+        background-position-y: 95%;
+    }
+
+    @media screen and (max-width: 600px) {
+        top: 11%;
+        left: 40.8%;
+        height: 82%;
+        width: 31%;
+    }
+
+    @media screen and (max-width: 480px) {
+        top: 8%;
+        left: 39.7%;
+        height: 82%;
+    }
+
+    @media screen and (max-width: 410px) {
+        height: 75%;
+    }
+
+    @media screen and (max-width: 325px) {
+        top: 18%;
+        left: 37.7%;
+        height: 62%;
+        width: 32%;
+    }
 }
 
 .heroImg3 {
     position: absolute;
-    bottom: 45px;
-    left: 423px;
-    height: 590px;
-    width: 130px;
+    top: 130px;
+    left: 80.3%;
+    height: 74.8%;
+    width: 33%;
     background-image: url("./assets/hero-3.png");
     background-repeat: no-repeat;
-    background-position-y: 95%;
+    background-position-y: 75%;
+    background-size: 85%;
+
+    @media screen and (max-width: 768px) {
+        top: 33%;
+        border-left: 1px solid #000;
+        background-position-y: 0;
+        left: 66.7%;
+        width: 23%;
+        height: 80%;
+    }
+
+    @media screen and (max-width: 600px) {
+        top: 28%;
+        left: 71.7%;
+        width: 31%;
+        height: 89%;
+    }
+
+    @media screen and (max-width: 480px) {
+        top: 22%;
+        left: 70.5%;
+        width: 33%;
+        height: 95%;
+    }
+
+    @media screen and (max-width: 410px) {
+        top: 24%;
+        height: 85%;
+    }
+
+    @media screen and (max-width: 325px) {
+        top: 34%;
+        height: 74%;
+        left: 69.5%;
+    }
 }

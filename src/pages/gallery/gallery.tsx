@@ -27,8 +27,8 @@ export const Gallery = () => {
                 подтверждение нашего высокого качества и индивидуального подхода к каждому проекту.
             </Text>
             <div className={styles.gallery}>
-                {photos.map((photo, index) => (
-                    <img className={styles.img} src={photo} key={index} alt="Фотография из галереи" />
+                {photos.map((photo) => (
+                    <img key={photo} className={styles.img} src={photo} alt="Фотография из галереи" />
                 ))}
             </div>
         </div>

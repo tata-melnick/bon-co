@@ -22,7 +22,7 @@ export const Advantages = () => {
                 <img src={sink} alt="раковина" />
             </div>
             <div className={styles.container}>
-                <div className={styles.gallaryContainer}>
+                <div className={styles.galleryContainer}>
                     <img src={stoneware} alt="каменная столшница" />
                     <Button>Перейти в галерею</Button>
                 </div>

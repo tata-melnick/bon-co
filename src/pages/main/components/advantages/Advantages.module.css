@@ -8,17 +8,45 @@
         margin-bottom: 75px;
         margin-top: 55px;
     }
+
+    @media screen and (max-width: 970px) {
+        flex-direction: column;
+        align-items: center;
+
+        &:last-of-type {
+            flex-direction: column-reverse;
+        }
+
+        img {
+            width: calc(100vw * 0.5);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        img {
+            width: calc(100vw * 0.85);
+        }
+    }
 }
 
 .titleContainer {
     width: 435px;
+
+    @media screen and (max-width: 970px) {
+        width: 50%;
+        margin-bottom: 35px;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 85%;
+    }
 }
 
 .title {
     margin-bottom: 40px;
 }
 
-.gallaryContainer {
+.galleryContainer {
     width: 350px;
     display: flex;
     flex-direction: column;
@@ -27,8 +55,18 @@
 }
 
 .advantagesContainer {
+    width: 435px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
+
+    @media screen and (max-width: 970px) {
+        width: 50%;
+        margin-bottom: 35px;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 85%;
+    }
 }

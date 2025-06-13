@@ -9,7 +9,7 @@ export const Hero = () => {
         <div className={styles.hero}>
             <div className={styles.welcome}>
                 <Title className={styles.title} type="h1">
-                    Добро пожаловать в BON&CO!
+                    Добро пожаловать <br /> в BON&CO!
                 </Title>
                 <Text className={styles.text}>
                     Мы — мастерская по обработке керамогранита, создающая уникальные изделия для вашего интерьера.

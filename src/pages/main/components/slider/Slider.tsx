@@ -1,4 +1,4 @@
-import React, { CSSProperties, useEffect, useRef, useState, WheelEventHandler } from "react";
+import React, { CSSProperties, useEffect, useRef, useState } from "react";
 
 import { Title } from "../../../../common";
 
@@ -8,65 +8,39 @@ export type Slide = { title: string; slide: string; description: string };
 type SliderProps = { sliders: Slide[] };
 
 export const Slider = ({ sliders }: SliderProps) => {
-    const [scrollWidth, setScrollWidth] = useState<number>(0);
+    const [scrollWidth, setScrollWidth] = useState<number>(20);
     const [offset, setOffset] = useState<number>(0);
 
-    const wrapperRef = useRef<HTMLDivElement>(null);
-    const sliderRef = useRef<HTMLDivElement>(null);
     const slideRef = useRef<HTMLDivElement>(null);
-    const sliderSize = useRef<{ width: number; slideWidth: number }>({ slideWidth: 0, width: 0 });
+    const sliderRef = useRef<HTMLDivElement>(null);
 
-    const onWheel: WheelEventHandler<HTMLDivElement> = ({ deltaY }) => {
-        if (!wrapperRef.current) return;
-
-        if (deltaY < 0) {
-            if (offset + 305 * (scrollWidth / 100) >= 305) return;
-            wrapperRef.current.scrollTo({
-                left: wrapperRef.current.scrollLeft + (scrollWidth / 4) * 20,
-                behavior: "smooth",
-            });
-            setOffset((prev) => prev + 77);
-        } else {
-            if (offset < 10) return;
-            wrapperRef.current.scrollTo({
-                left: wrapperRef.current.scrollLeft - (scrollWidth / 4) * 20,
-                behavior: "smooth",
-            });
-            setOffset((prev) => prev - 77);
-        }
-    };
-
-    const onMouseEnter = () => {
-        document.body.style.overflow = "hidden";
-        document.body.style.paddingRight = "10px";
-    };
-
-    const onMouseLeave = () => {
-        document.body.style.overflow = "auto";
-        document.body.style.paddingRight = "0";
+    const onScroll: React.UIEventHandler<HTMLDivElement> = (e) => {
+        if (!sliderRef.current) return;
+        const { scrollLeft } = e.currentTarget;
+        setOffset(scrollLeft / (sliderRef.current.scrollWidth / (window.innerWidth > 768 ? 305 : 205)));
     };
 
     useEffect(() => {
-        if (sliderRef.current && slideRef.current) {
-            sliderSize.current.width = sliderRef.current.getBoundingClientRect().width;
-            sliderSize.current.slideWidth = slideRef.current.getBoundingClientRect().width;
-        }
-    }, [sliderRef]);
+        const resize = () => {
+            if (slideRef.current) {
+                const { width } = slideRef.current.getBoundingClientRect();
+                const count = Math.floor(window.innerWidth / width);
+                setScrollWidth(20 * (count <= 4 ? count : 4));
+            }
+        };
 
-    useEffect(() => {
-        const { slideWidth, width } = sliderSize.current;
-        setScrollWidth((slideWidth / (width / 100)) * 4);
-    }, [sliderSize.current.slideWidth, sliderSize.current.width]);
+        resize();
+
+        window.addEventListener("resize", resize);
+
+        return () => {
+            window.removeEventListener("resize", resize);
+        };
+    }, []);
 
     return (
         <>
-            <div
-                ref={wrapperRef}
-                className={styles.wrapper}
-                onWheel={onWheel}
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-            >
+            <div className={styles.wrapper} onScroll={onScroll}>
                 <div ref={sliderRef} className={styles.slider}>
                     {sliders.map(({ slide, title, description }) => (
                         <div ref={slideRef} key={slide.replace(/[./]/g, "")} className={styles.slide}>

@@ -30,20 +30,19 @@ export const Services = () => {
             <Title className={styles.title} type="h2">
                 Наши услуги включают:
             </Title>
-
             <div className={styles.content}>
                 {services.map(({ src, title, description }, i) => (
-                    <>
-                        <Delimiter isVisible={i === 1} />
+                    <React.Fragment key={title}>
                         <div key={title} className={styles.service}>
+                            <Delimiter isVisible={i === 1} />
                             <img className={styles.img} src={src} alt="Иконка услуги" />
                             <Title className={styles.servicesTitle} type="h3">
                                 {title}
                             </Title>
                             <Text className={styles.text}>{description}</Text>
+                            <Delimiter isVisible={i === 1} isRight />
                         </div>
-                        <Delimiter isVisible={i === 1} isRight />
-                    </>
+                    </React.Fragment>
                 ))}
             </div>
         </div>
